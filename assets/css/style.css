@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* , *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Press Start 2P', cursive;  
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.container img {
+    width: 250px;
+}
+.container h1 {
+    font-size: 1.5em;
+    color: hsl(48, 94%, 51%);
+    text-shadow: 2px 3px 0px #333;
+}
+
+.login-input {
+    border: 2px solid #333;
+    border-radius: 8px;
+    color: hsl(48, 94%, 51%);
+    font-size: 1em;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+    outline: none;
+    padding: 10px;
+}
+.login-button {
+    font-size: 1em;
+    background-color: hsl(48, 94%, 51%);
+    padding: 15px;
+    border-radius: 8px;
+    color: #333;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+}
+.login-button:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: auto;
+}
+
+@media (min-width:800px) {
+    .container img {
+        transition: transform .25s linear;
+    }
+    .container img:hover {
+        transform: translateY(-15px);
+    }
+
+}
