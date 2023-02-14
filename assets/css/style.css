@@ -60,6 +60,7 @@
     cursor: auto;
 }
 
+
 @media (min-width:800px) {
     .container img {
         transition: transform .25s linear;

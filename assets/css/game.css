@@ -12,10 +12,10 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-image:url(../images/editado.jpg);    
+    background-image:url(../images/backg6.png);    
     background-color: #333; 
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
@@ -50,6 +50,9 @@ header {
     transition: all 500ms ease;
     transform-style: preserve-3d;
     background-color: #ccc;
+}
+.card:hover{
+    cursor: grabbing;
 }
 
 .reveal-card {
