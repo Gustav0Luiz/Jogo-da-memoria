@@ -15,12 +15,14 @@ const createElement = (tag , className) => {
 let firstCard = '';
 let secondCard = '';
 
+
+
 const checkEndGame = () => {
     const disabledCards = document.querySelectorAll('.disabled-card');
     if(disabledCards.length === 20){
         clearInterval(this.loop);
-        alert(`Parabéns, ${spanPLayer.innerHTML}! Seu tempo foi de:  ${min} minuto(s) e ${seg} segundo(s).`);
-        location.reload()
+        //alert(`Parabéns, ${spanPLayer.innerHTML}! Seu tempo foi de:  ${min} minuto(s) e ${seg} segundo(s).`);
+        window.location = "../pages/gameover.html";
     }
 }
 
@@ -109,13 +111,14 @@ const segundo = () => {
         document.getElementById('minuto').innerHTML = min;
     }
     document.getElementById('segundo').innerHTML = seg;
+    localStorage.setItem("min", min);
+    localStorage.setItem("seg", seg);
 }
 const startTimer = () => {setInterval(function(){ segundo() },1000)}
 
 window.onload= () => {
 
     const playerName = localStorage.getItem('Jogador');
-
     spanPLayer.innerHTML = playerName;
     startTimer();
     loadGame();

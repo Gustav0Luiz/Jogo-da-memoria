@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* , *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Press Start 2P', cursive;  
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image:url(../images/backg6.png);    
+    background-color: #333; 
+    background-size: cover;
+    background-position: bottom;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center; 
+    padding: 20px 20px 50px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255,255, 0.7); ;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    margin: 0 0 30px;
+    border-radius: 5px;
+    border: 2px solid hsl(48, 94%, 51%);
+}
+.player{
+    margin-bottom: 30px;
+    line-height: 20px;
+}
+.btn {
+    font-size: 1em;
+    background-color: rgba(230,244,245, .1); 
+    padding: 15px;
+    border-radius: 8px;
+    color: #333;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    border: 2px solid #333;
+}
+
+.btn:hover {
+    background-color: hsl(48, 94%, 51%) ;
+}
