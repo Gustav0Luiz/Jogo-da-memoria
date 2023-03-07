@@ -62,6 +62,19 @@
     cursor: auto;
 }
 
+.select-gamemode {
+    margin: 15px;
+    border-radius: 8px;
+    color: #333;
+    font-size: .8em;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: hsl(48, 94%, 51%);
+}
+
+
 
 @keyframes anim {
     0% {

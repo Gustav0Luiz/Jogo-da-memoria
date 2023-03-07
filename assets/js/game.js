@@ -1,6 +1,8 @@
 const grid = document.querySelector('.grid');
 const spanPLayer = document.querySelector('.player');
+const spanDifficulty = document.querySelector('.dificuldade');
 const timer = document.querySelector('.timer');
+const gameDifficulty = localStorage.getItem('Dificuldade');
 
 const characters = ['garota3','bunny1','hamster','flamingo','music','turtle','penguin','lion','casal','garotinha2'];
 
@@ -26,6 +28,23 @@ const checkEndGame = () => {
     }
 }
 
+const gameover = () => {
+    clearInterval(this.loop);
+    window.location = "../pages/gameover.html";
+}
+const checkLose = () => {
+    if(gameDifficulty === 'Fácil'  && localStorage.getItem('min') >= 1 && localStorage.getItem('seg') >= 30) {
+        gameover();
+        console.log('oi')
+    }
+    else if(gameDifficulty === 'Médio'  && localStorage.getItem('min') == 1 ) {
+        gameover();
+    }
+    else if(gameDifficulty === 'Difícil'  && localStorage.getItem('seg') == 30) {
+        gameover();
+ }}
+
+
 
 const checkCards = () => {
     const firstCharacter = firstCard.getAttribute('data-character');
@@ -38,9 +57,7 @@ const checkCards = () => {
 
         firstCard = '';
         secondCard = '';
-
         checkEndGame();
-
     }else {
         setTimeout(() => {
 
@@ -114,12 +131,13 @@ const segundo = () => {
     localStorage.setItem("min", min);
     localStorage.setItem("seg", seg);
 }
-const startTimer = () => {setInterval(function(){ segundo() },1000)}
+const startTimer = () => {setInterval(function(){ segundo() , checkLose() },1000)}
 
 window.onload= () => {
 
     const playerName = localStorage.getItem('Jogador');
     spanPLayer.innerHTML = playerName;
+    spanDifficulty.innerHTML = gameDifficulty;
     startTimer();
     loadGame();
 }

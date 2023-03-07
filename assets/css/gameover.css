@@ -49,8 +49,16 @@ header {
     max-width: 300px;
     cursor: pointer;
     border: 2px solid #333;
+    line-height: 19px;
 }
 
 .btn:hover {
     background-color: hsl(48, 94%, 51%) ;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }

@@ -7,16 +7,18 @@
     <title>Jogo da Memória | Login </title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script defer src="assets/js/script.js"></script>
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/coffe-removebg-preview.png" type="image/x-icon">
 </head>
 <body>
-    <form class="login-form">
+    <form class="login-form" autocomplete="off">
 
         <div class="container">
             <img src="assets/images/coffe-white.png" alt="coffee picture" class="image">
             <h1>Jogo da Memória</h1>
         </div>
-        <input type="text" placeholder="Nome" class="login-input" spellcheck = 'false' name = 'name'>
+        <input type="text" placeholder="Nome" class="login-input" spellcheck = 'false' name = 'name' >
+        <label for="gamemode">escolha uma dificuldade:</label>
+        <input type="button" value="Fácil" class="select-gamemode"></input>
         <button type="submit" class="login-button" disabled> Jogar </button>
     </form>
 </body>
