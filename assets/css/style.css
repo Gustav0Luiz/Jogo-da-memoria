@@ -30,7 +30,7 @@
     animation: anim 5s linear 0s infinite;
 }
 .container h1 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: hsl(48, 94%, 51%);
     text-shadow: 2px 3px 0px #333;
 }
@@ -74,7 +74,9 @@
     background-color: hsl(48, 94%, 51%);
 }
 
-
+label{
+    font-size: .8rem;
+}
 
 @keyframes anim {
     0% {
